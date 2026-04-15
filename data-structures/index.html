@@ -748,14 +748,43 @@
 <h2 id="1">1. Линейные структуры 📏<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="arrays">Массивы (Arrays)<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h3>
 <p><strong>Определение:</strong> Непрерывный блок памяти, хранящий элементы одного типа.</p>
-<p><strong>Характеристики:</strong>
-| Операция | Сложность | Описание |
-|----------|-----------|----------|
-| Доступ по индексу | <strong>O(1)</strong> | Мгновенно: <code>address = base + index * element_size</code> |
-| Поиск | O(n) | Нужно перебрать все элементы |
-| Вставка в конец | O(1)<em> | Амортизированно (если есть место) |
-| Вставка в середину | </em><em>O(n)</em><em> | Нужно сдвинуть все элементы справа |
-| Удаление | </em><em>O(n)</em>* | Нужно сдвинуть элементы и заполнить дыру |</p>
+<p><strong>Характеристики:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Операция</th>
+<th>Сложность</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Доступ по индексу</td>
+<td><strong>O(1)</strong></td>
+<td>Мгновенно: <code>address = base + index * element_size</code></td>
+</tr>
+<tr>
+<td>Поиск</td>
+<td>O(n)</td>
+<td>Нужно перебрать все элементы</td>
+</tr>
+<tr>
+<td>Вставка в конец</td>
+<td>O(1)*</td>
+<td>Амортизированно (если есть место)</td>
+</tr>
+<tr>
+<td>Вставка в середину</td>
+<td><strong>O(n)</strong></td>
+<td>Нужно сдвинуть все элементы справа</td>
+</tr>
+<tr>
+<td>Удаление</td>
+<td><strong>O(n)</strong></td>
+<td>Нужно сдвинуть элементы и заполнить дыру</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Плюсы:</strong>
 - ✅ Быстрый доступ по индексу
 - ✅ Компактное хранение (нет накладных расходов на указатели)
@@ -764,12 +793,11 @@
 - ❌ Фиксированный размер (в статических массивах)
 - ❌ Дорогая вставка/удаление в середине</p>
 <p><strong>Пример использования:</strong> Хранение пикселей изображения, буфер аудио, матрицы.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Python: списки — динамические массивы</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Python: списки — динамические массивы</span>
 <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>      <span class="c1"># O(1): 30</span>
 <span class="n">arr</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>  <span class="c1"># O(n): сдвиг элементов [10, 20, 25, 30, 40, 50]</span>
 </code></pre></div>
-
 <hr />
 <h3 id="linked-lists">Связные списки (Linked Lists)<a class="headerlink" href="#linked-lists" title="Permanent link">&para;</a></h3>
 <p><strong>Определение:</strong> Элементы (узлы) хранятся в произвольных местах памяти, каждый содержит данные и указатель на следующий узел.</p>
@@ -777,14 +805,43 @@
 - <strong>Односвязный:</strong> Каждый узел → следующий.
 - <strong>Двусвязный:</strong> Узел → следующий + предыдущий.
 - <strong>Циклический:</strong> Последний узел → первый.</p>
-<p><strong>Характеристики:</strong>
-| Операция | Сложность | Описание |
-|----------|-----------|----------|
-| Доступ по индексу | <strong>O(n)</strong> | Нужно пройти от головы до элемента |
-| Поиск | O(n) | Перебор всех узлов |
-| Вставка в начало | <strong>O(1)</strong> | Изменить указатель головы |
-| Вставка в середину | O(1)<em> | Если известен узел перед точкой вставки |
-| Удаление | O(1)</em> | Если известен узел |</p>
+<p><strong>Характеристики:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Операция</th>
+<th>Сложность</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Доступ по индексу</td>
+<td><strong>O(n)</strong></td>
+<td>Нужно пройти от головы до элемента</td>
+</tr>
+<tr>
+<td>Поиск</td>
+<td>O(n)</td>
+<td>Перебор всех узлов</td>
+</tr>
+<tr>
+<td>Вставка в начало</td>
+<td><strong>O(1)</strong></td>
+<td>Изменить указатель головы</td>
+</tr>
+<tr>
+<td>Вставка в середину</td>
+<td>O(1)*</td>
+<td>Если известен узел перед точкой вставки</td>
+</tr>
+<tr>
+<td>Удаление</td>
+<td>O(1)*</td>
+<td>Если известен узел</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Плюсы:</strong>
 - ✅ Динамический размер (растет/сжимается при необходимости)
 - ✅ Быстрая вставка/удаление (без сдвига элементов)
@@ -794,7 +851,7 @@
 - ❌ Дополнительные расходы на указатели (2x-3x больше памяти)
 - ❌ Плохая кэш-локальность (узлы разбросаны в памяти)</p>
 <p><strong>Пример использования:</strong> Реализация стеков, очередей, undo/redo в редакторах.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
@@ -804,7 +861,6 @@
 <span class="n">new_node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span>
 <span class="n">head</span> <span class="o">=</span> <span class="n">new_node</span>
 </code></pre></div>
-
 <hr />
 <h3 id="stacks">Стеки (Stacks)<a class="headerlink" href="#stacks" title="Permanent link">&para;</a></h3>
 <p><strong>Определение:</strong> Структура LIFO (Last In, First Out) — последний пришел, первый ушел.</p>
@@ -817,14 +873,13 @@
 - Отмена действий (Ctrl+Z).
 - Проверка скобочных последовательностей.
 - DFS (поиск в глубину).</p>
-<div class="codehilite"><pre><span></span><code><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight"><pre><span></span><code><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># push</span>
 <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">top</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="c1"># pop → 2</span>
 </code></pre></div>
-
-<p><strong>Задача:</strong> Проверка правильности скобочной последовательности.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<p><strong>Задача:</strong> Проверка правильности скобочной последовательности.
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;)&#39;</span><span class="p">:</span> <span class="s1">&#39;(&#39;</span><span class="p">,</span> <span class="s1">&#39;}&#39;</span><span class="p">:</span> <span class="s1">&#39;{&#39;</span><span class="p">,</span> <span class="s1">&#39;]&#39;</span><span class="p">:</span> <span class="s1">&#39;[&#39;</span><span class="p">}</span>
     <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
@@ -835,8 +890,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
     <span class="k">return</span> <span class="ow">not</span> <span class="n">stack</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <hr />
 <h3 id="queues">Очереди (Queues)<a class="headerlink" href="#queues" title="Permanent link">&para;</a></h3>
 <p><strong>Определение:</strong> Структура FIFO (First In, First Out) — первый пришел, первый ушел.</p>
@@ -853,13 +907,12 @@
 - Печать документов.
 - BFS (поиск в ширину).
 - Буферизация потоков данных.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
 <span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
 <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>      <span class="c1"># enqueue</span>
 <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">first</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>  <span class="c1"># dequeue → 1</span>
 </code></pre></div>
-
 <hr />
 <h2 id="2">2. Иерархические структуры 🌳<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="trees">Деревья (Trees)<a class="headerlink" href="#trees" title="Permanent link">&para;</a></h3>
@@ -873,14 +926,35 @@
 <p><strong>Свойство:</strong> Для каждого узла:
 - Все значения в левом поддереве &lt; значения узла.
 - Все значения в правом поддереве &gt; значения узла.</p>
-<p><strong>Характеристики:</strong>
-| Операция | Сложность (средняя) | Сложность (худшая) |
-|----------|---------------------|--------------------|
-| Поиск | O(log n) | <strong>O(n)</strong> (вырожденное дерево) |
-| Вставка | O(log n) | O(n) |
-| Удаление | O(log n) | O(n) |</p>
+<p><strong>Характеристики:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Операция</th>
+<th>Сложность (средняя)</th>
+<th>Сложность (худшая)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Поиск</td>
+<td>O(log n)</td>
+<td><strong>O(n)</strong> (вырожденное дерево)</td>
+</tr>
+<tr>
+<td>Вставка</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Удаление</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Проблема:</strong> При неудачном порядке вставки дерево вырождается в связный список.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TreeNode</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TreeNode</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
@@ -893,7 +967,6 @@
         <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 </code></pre></div>
-
 <h3 id="_2">Сбалансированные деревья<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Решают проблему вырождения BST, поддерживая высоту O(log n).</p>
 <table>
@@ -952,12 +1025,11 @@
 - Детерминированность: <code>hash(x)</code> всегда одинаков для одного x.
 - Равномерность: Хэши распределяются равномерно по таблице.
 - Эффективность: Быстрое вычисление.</p>
-<p><strong>Пример (Python dict):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="s1">&#39;Moscow&#39;</span><span class="p">}</span>
+<p><strong>Пример (Python dict):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="s1">&#39;Moscow&#39;</span><span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>  <span class="c1"># O(1): Alice</span>
 <span class="n">d</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">26</span>     <span class="c1"># O(1): обновление</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <p><strong>Применение:</strong>
 - Словари, ассоциативные массивы.
 - Кэширование (memoization).
@@ -985,14 +1057,13 @@
 - Алгоритм Дейкстры (кратчайший путь).
 - Сортировка Heap Sort.
 - Поиск K наибольших/наименьших элементов.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">heapq</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">heapq</span>
 <span class="n">heap</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">heap</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">min_val</span> <span class="o">=</span> <span class="n">heapq</span><span class="o">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">heap</span><span class="p">)</span>  <span class="c1"># 5</span>
 </code></pre></div>
-
 <h3 id="trie">Trie (Префиксное дерево)<a class="headerlink" href="#trie" title="Permanent link">&para;</a></h3>
 <p><strong>Определение:</strong> Дерево для хранения строк, где каждый узел — символ, а путь от корня до узла — строка.</p>
 <p><strong>Применение:</strong>
@@ -1000,7 +1071,7 @@
 - Проверка орфографии.
 - IP-маршрутизация (longest prefix match).
 - Словари для игр (Scrabble).</p>
-<div class="codehilite"><pre><span></span><code>       (root)
+<p><div class="highlight"><pre><span></span><code>       (root)
       /   |   \
      c    a    t
     / \   |    |
@@ -1010,8 +1081,7 @@
  |           |
  s           r
 </code></pre></div>
-
-<p><em>Слова: cat, cats, chat, art, car, tea, tear</em></p>
+<em>Слова: cat, cats, chat, art, car, tea, tear</em></p>
 <h3 id="skip-list">Skip List (Список с пропусками)<a class="headerlink" href="#skip-list" title="Permanent link">&para;</a></h3>
 <p><strong>Определение:</strong> probabilistic структура, альтернатива сбалансированным деревьям. Многоуровневый связный список с "экспресс-полосами".</p>
 <p><strong>Сложность:</strong> O(log n) для поиска, вставки, удаления.</p>

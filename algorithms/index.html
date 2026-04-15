@@ -916,7 +916,7 @@
 <li><strong>Произведение сложностей:</strong> Если вложены друг в друга → умножаем: <code>O(n) × O(n) = O(n²)</code></li>
 </ol>
 <h3 id="_3">Примеры анализа<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># O(1) - Константное</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># O(1) - Константное</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_first</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
@@ -947,7 +947,6 @@
             <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># Отбрасываем половину</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 </code></pre></div>
-
 <hr />
 <h2 id="2">2. Алгоритмы сортировки 🔀<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="_4">Сравнительная таблица<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -1031,7 +1030,7 @@
 </table>
 <h3 id="bubble-sort">Пузырьковая сортировка (Bubble Sort)<a class="headerlink" href="#bubble-sort" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Многократно проходим по массиву, меняя местами соседние элементы, если они в неправильном порядке.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">swapped</span> <span class="o">=</span> <span class="kc">False</span>
@@ -1042,15 +1041,12 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">swapped</span><span class="p">:</span>  <span class="c1"># Оптимизация: если не было обменов, массив уже отсортирован</span>
             <span class="k">break</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Плюсы:</strong> Простота реализации.</li>
-<li><strong>Минусы:</strong> Очень медленно O(n²).</li>
-<li><strong>Применение:</strong> Только в учебных целях.</li>
-</ul>
+- <strong>Плюсы:</strong> Простота реализации.
+- <strong>Минусы:</strong> Очень медленно O(n²).
+- <strong>Применение:</strong> Только в учебных целях.</p>
 <h3 id="insertion-sort">Сортировка вставками (Insertion Sort)<a class="headerlink" href="#insertion-sort" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Берем элемент и вставляем его на правильное место среди уже отсортированных элементов слева.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insertion_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insertion_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
         <span class="n">key</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
@@ -1059,15 +1055,12 @@
             <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
         <span class="n">arr</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Плюсы:</strong> Эффективен на почти отсортированных данных O(n), стабилен, сортирует "на месте".</li>
-<li><strong>Минусы:</strong> O(n²) в среднем случае.</li>
-<li><strong>Применение:</strong> Малые массивы (&lt;50 элементов), финальная стадия QuickSort.</li>
-</ul>
+- <strong>Плюсы:</strong> Эффективен на почти отсортированных данных O(n), стабилен, сортирует "на месте".
+- <strong>Минусы:</strong> O(n²) в среднем случае.
+- <strong>Применение:</strong> Малые массивы (&lt;50 элементов), финальная стадия QuickSort.</p>
 <h3 id="quicksort">Быстрая сортировка (QuickSort)<a class="headerlink" href="#quicksort" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Выбираем опорный элемент (pivot), разделяем массив на две части (меньше pivot и больше pivot), рекурсивно сортируем части.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">quick_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">quick_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">arr</span>
     <span class="n">pivot</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
@@ -1076,9 +1069,8 @@
     <span class="n">right</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">quick_sort</span><span class="p">(</span><span class="n">right</span><span class="p">)</span>
 </code></pre></div>
-
-<p><strong>Оптимизированная версия (in-place):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">quick_sort_inplace</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<p><strong>Оптимизированная версия (in-place):</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">quick_sort_inplace</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">high</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">if</span> <span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">:</span>
@@ -1097,15 +1089,12 @@
     <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Плюсы:</strong> Очень быстро на практике O(n log n), сортирует "на месте".</li>
-<li><strong>Минусы:</strong> Нестабилен, худший случай O(n²) (решается рандомизацией pivot).</li>
-<li><strong>Применение:</strong> Стандартная сортировка во многих языках.</li>
-</ul>
+- <strong>Плюсы:</strong> Очень быстро на практике O(n log n), сортирует "на месте".
+- <strong>Минусы:</strong> Нестабилен, худший случай O(n²) (решается рандомизацией pivot).
+- <strong>Применение:</strong> Стандартная сортировка во многих языках.</p>
 <h3 id="mergesort">Сортировка слиянием (MergeSort)<a class="headerlink" href="#mergesort" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Разделяем массив пополам, рекурсивно сортируем половины, сливаем отсортированные половины.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">merge_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">merge_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">arr</span>
     <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
@@ -1127,15 +1116,12 @@
     <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">:])</span>
     <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Плюсы:</strong> Гарантированный O(n log n), стабилен.</li>
-<li><strong>Минусы:</strong> Требует O(n) дополнительной памяти.</li>
-<li><strong>Применение:</strong> Сортировка linked lists, внешняя сортировка (когда данные не помещаются в RAM).</li>
-</ul>
+- <strong>Плюсы:</strong> Гарантированный O(n log n), стабилен.
+- <strong>Минусы:</strong> Требует O(n) дополнительной памяти.
+- <strong>Применение:</strong> Сортировка linked lists, внешняя сортировка (когда данные не помещаются в RAM).</p>
 <h3 id="heapsort">Пирамидальная сортировка (HeapSort)<a class="headerlink" href="#heapsort" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Строим max-heap из массива, многократно извлекаем максимум (корень) и перестраиваем кучу.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">heap_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">heap_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="c1"># Построение кучи</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
@@ -1158,30 +1144,24 @@
         <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">largest</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">largest</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">heapify</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">largest</span><span class="p">)</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Плюсы:</strong> O(n log n) всегда, сортирует "на месте" O(1).</li>
-<li><strong>Минусы:</strong> Нестабилен, медленнее QuickSort на практике.</li>
-<li><strong>Применение:</strong> Когда критична память.</li>
-</ul>
+- <strong>Плюсы:</strong> O(n log n) всегда, сортирует "на месте" O(1).
+- <strong>Минусы:</strong> Нестабилен, медленнее QuickSort на практике.
+- <strong>Применение:</strong> Когда критична память.</p>
 <hr />
 <h2 id="3">3. Алгоритмы поиска 🔍<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <h3 id="linear-search">Линейный поиск (Linear Search)<a class="headerlink" href="#linear-search" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Последовательно проверяем каждый элемент.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">linear_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">linear_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">i</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Сложность:</strong> O(n)</li>
-<li><strong>Применение:</strong> Несохраненные массивы, малые n.</li>
-</ul>
+- <strong>Сложность:</strong> O(n)
+- <strong>Применение:</strong> Несохраненные массивы, малые n.</p>
 <h3 id="binary-search">Бинарный поиск (Binary Search)<a class="headerlink" href="#binary-search" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Сравниваем с серединой, отбрасываем половину, повторяем. <strong>Только для отсортированных массивов!</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">binary_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">binary_search</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
         <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
@@ -1193,14 +1173,11 @@
             <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Сложность:</strong> O(log n)</li>
-<li><strong>Применение:</strong> Поиск в отсортированных данных, бинарный поиск по ответу.</li>
-</ul>
+- <strong>Сложность:</strong> O(log n)
+- <strong>Применение:</strong> Поиск в отсортированных данных, бинарный поиск по ответу.</p>
 <h3 id="bfs-dfs">Поиск в ширину (BFS) и глубину (DFS) на графах<a class="headerlink" href="#bfs-dfs" title="Permanent link">&para;</a></h3>
-<p><strong>BFS (Queue):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
+<p><strong>BFS (Queue):</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">bfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
     <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -1213,10 +1190,9 @@
             <span class="k">if</span> <span class="n">neighbor</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
                 <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span>
                 <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span>
-</code></pre></div>
-
-<p><strong>DFS (Stack/Recursion):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">visited</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</code></pre></div></p>
+<p><strong>DFS (Stack/Recursion):</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">visited</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">visited</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
     <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
@@ -1224,13 +1200,12 @@
     <span class="k">for</span> <span class="n">neighbor</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">start</span><span class="p">]:</span>
         <span class="k">if</span> <span class="n">neighbor</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
             <span class="n">dfs</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">neighbor</span><span class="p">,</span> <span class="n">visited</span><span class="p">)</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <hr />
 <h2 id="4">4. Алгоритмы на графах 🕸️<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <h3 id="_5">Алгоритм Дейкстры (кратчайший путь)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Жадный алгоритм для поиска кратчайшего пути во взвешенном графе без отрицательных весов.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">heapq</span>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">heapq</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">dijkstra</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
     <span class="n">distances</span> <span class="o">=</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">}</span>
@@ -1251,17 +1226,14 @@
 
     <span class="k">return</span> <span class="n">distances</span>
 </code></pre></div>
-
-<ul>
-<li><strong>Сложность:</strong> O((V+E) log V)</li>
-<li><strong>Применение:</strong> GPS-навигация, маршрутизация в сетях.</li>
-</ul>
+- <strong>Сложность:</strong> O((V+E) log V)
+- <strong>Применение:</strong> GPS-навигация, маршрутизация в сетях.</p>
 <hr />
 <h2 id="5-dp">5. Динамическое программирование (DP) 🧩<a class="headerlink" href="#5-dp" title="Permanent link">&para;</a></h2>
 <p><strong>Идея:</strong> Разбиение задачи на перекрывающиеся подзадачи, решение каждой один раз и сохранение результата (memoization/tabulation).</p>
 <h3 id="dp">Классические задачи DP<a class="headerlink" href="#dp" title="Permanent link">&para;</a></h3>
-<p><strong>1. Числа Фибоначчи:</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># ❌ Рекурсия без мемоизации: O(2^n)</span>
+<p><strong>1. Числа Фибоначчи:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># ❌ Рекурсия без мемоизации: O(2^n)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">n</span>
@@ -1284,10 +1256,9 @@
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">dp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
-</code></pre></div>
-
-<p><strong>2. Задача о рюкзаке (Knapsack):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">knapsack</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
+</code></pre></div></p>
+<p><strong>2. Задача о рюкзаке (Knapsack):</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">knapsack</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
     <span class="n">dp</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">capacity</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
 
@@ -1299,21 +1270,19 @@
                 <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">capacity</span><span class="p">]</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <hr />
 <h2 id="6-greedy">6. Жадные алгоритмы (Greedy) 💰<a class="headerlink" href="#6-greedy" title="Permanent link">&para;</a></h2>
 <p><strong>Идея:</strong> На каждом шаге выбираем локально оптимальное решение в надежде, что оно приведет к глобальному оптимуму.</p>
-<p><strong>Пример: Размен монет (для канонических систем):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">coin_change</span><span class="p">(</span><span class="n">coins</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+<p><strong>Пример: Размен монет (для канонических систем):</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">coin_change</span><span class="p">(</span><span class="n">coins</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
     <span class="n">coins</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">coins</span><span class="p">:</span>
         <span class="n">count</span> <span class="o">+=</span> <span class="n">amount</span> <span class="o">//</span> <span class="n">coin</span>
         <span class="n">amount</span> <span class="o">%=</span> <span class="n">coin</span>
     <span class="k">return</span> <span class="n">count</span> <span class="k">if</span> <span class="n">amount</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <p><strong>Когда работает:</strong> Задача о рюкзаке (непрерывная), алгоритм Дейкстры, минимальное остовное дерево (Крускал, Прим).</p>
 <p><strong>Когда НЕ работает:</strong> Задача о рюкзаке (0/1), задача коммивояжера.</p>
 <hr />

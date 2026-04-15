@@ -754,20 +754,45 @@
 <h2 id="1">1. Основные компоненты компьютера 🖥️<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="cpu-central-processing-unit">Процессор (CPU — Central Processing Unit)<a class="headerlink" href="#cpu-central-processing-unit" title="Permanent link">&para;</a></h3>
 <p>"Мозг" компьютера, выполняющий инструкции программы.</p>
-<p><strong>Структура CPU:</strong>
-| Компонент | Назначение | Пример |
-|-----------|------------|--------|
-| <strong>АЛУ (ALU)</strong> | Арифметико-логические операции: сложение, вычитание, сравнение | <code>5 + 3 = 8</code>, <code>x &gt; y</code> |
-| <strong>УУ (CU)</strong> | Декодирование инструкций, управление потоком данных | Чтение команды из памяти, отправка сигналов в АЛУ |
-| <strong>Регистры</strong> | Сверхбыстрая память внутри CPU для временного хранения данных | <code>EAX</code>, <code>EBX</code> (x86), <code>R0-R15</code> (ARM) |
-| <strong>Кэш L1/L2/L3</strong> | Быстрая буферная память между CPU и RAM | L1: 32-64 KB на ядро, L3: несколько MB на весь CPU |</p>
+<p><strong>Структура CPU:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Назначение</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>АЛУ (ALU)</strong></td>
+<td>Арифметико-логические операции: сложение, вычитание, сравнение</td>
+<td><code>5 + 3 = 8</code>, <code>x &gt; y</code></td>
+</tr>
+<tr>
+<td><strong>УУ (CU)</strong></td>
+<td>Декодирование инструкций, управление потоком данных</td>
+<td>Чтение команды из памяти, отправка сигналов в АЛУ</td>
+</tr>
+<tr>
+<td><strong>Регистры</strong></td>
+<td>Сверхбыстрая память внутри CPU для временного хранения данных</td>
+<td><code>EAX</code>, <code>EBX</code> (x86), <code>R0-R15</code> (ARM)</td>
+</tr>
+<tr>
+<td><strong>Кэш L1/L2/L3</strong></td>
+<td>Быстрая буферная память между CPU и RAM</td>
+<td>L1: 32-64 KB на ядро, L3: несколько MB на весь CPU</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Тактовая частота:</strong> Измеряется в ГГц (миллиардах циклов в секунду). За один такт может выполняться одна или несколько микроопераций.</p>
 <blockquote>
 <p><strong>Важно:</strong> Больше ГГц ≠ всегда быстрее. Архитектура (IPC — instructions per cycle) важнее чистой частоты.</p>
 </blockquote>
 <h3 id="memory-hierarchy">Память (Memory Hierarchy) 📊<a class="headerlink" href="#memory-hierarchy" title="Permanent link">&para;</a></h3>
 <p>Иерархия памяти строится по принципу <strong>"быстрее = меньше = дороже"</strong>:</p>
-<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────┐
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────┐
 │         Регистры CPU                │ ← 1 цикл, ~1 байт
 │         (самая быстрая)             │
 ├─────────────────────────────────────┤
@@ -784,7 +809,6 @@
 │    HDD (медленная вторичная)        │ ← 1,000,000+ циклов, ~1-10 TB
 └─────────────────────────────────────┘
 </code></pre></div>
-
 <p><strong>Типы памяти:</strong>
 - <strong>RAM (Random Access Memory):</strong> Энергозависимая, быстрая, для работающих программ.
   - <strong>DRAM:</strong> Дешевле, медленнее, используется для основной памяти.
@@ -809,34 +833,30 @@
 2. <strong>Последовательное выполнение:</strong> Команды выполняются одна за другой.
 3. <strong>Адресуемость памяти:</strong> Каждая ячейка памяти имеет уникальный адрес.
 4. <strong>Условные переходы:</strong> Возможность изменять порядок выполнения команд (if, loops).</p>
-<p><strong>Цикл выполнения команды (Fetch-Decode-Execute):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Fetch</span><span class="w"> </span><span class="p">(</span><span class="n">Выборка</span><span class="p">):</span><span class="w">    </span><span class="n">Получить</span><span class="w"> </span><span class="n">команду</span><span class="w"> </span><span class="n">из</span><span class="w"> </span><span class="n">памяти</span><span class="w"> </span><span class="n">по</span><span class="w"> </span><span class="n">адресу</span><span class="w"> </span><span class="n">PC</span><span class="w"> </span><span class="p">(</span><span class="n">Program</span><span class="w"> </span><span class="n">Counter</span><span class="p">)</span>
-<span class="mf">2.</span><span class="w"> </span><span class="n">Decode</span><span class="w"> </span><span class="p">(</span><span class="n">Декодирование</span><span class="p">):</span><span class="w"> </span><span class="n">Определить</span><span class="p">,</span><span class="w"> </span><span class="n">что</span><span class="w"> </span><span class="n">нужно</span><span class="w"> </span><span class="n">сделать</span>
-<span class="mf">3.</span><span class="w"> </span><span class="n">Execute</span><span class="w"> </span><span class="p">(</span><span class="n">Выполнение</span><span class="p">):</span><span class="w"> </span><span class="n">Выполнить</span><span class="w"> </span><span class="n">операцию</span><span class="w"> </span><span class="p">(</span><span class="n">АЛУ</span><span class="p">,</span><span class="w"> </span><span class="n">запись</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">память</span><span class="p">,</span><span class="w"> </span><span class="n">переход</span><span class="p">)</span>
-<span class="mf">4.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">PC</span><span class="p">:</span><span class="w">          </span><span class="n">Увеличить</span><span class="w"> </span><span class="n">счетчик</span><span class="w"> </span><span class="n">команд</span><span class="w"> </span><span class="p">(</span><span class="n">или</span><span class="w"> </span><span class="n">установить</span><span class="w"> </span><span class="n">новый</span><span class="w"> </span><span class="n">адрес</span><span class="w"> </span><span class="n">при</span><span class="w"> </span><span class="n">переходе</span><span class="p">)</span>
-</code></pre></div>
-
+<p><strong>Цикл выполнения команды (Fetch-Decode-Execute):</strong>
+<div class="highlight"><pre><span></span><code>1. Fetch (Выборка):    Получить команду из памяти по адресу PC (Program Counter)
+2. Decode (Декодирование): Определить, что нужно сделать
+3. Execute (Выполнение): Выполнить операцию (АЛУ, запись в память, переход)
+4. Update PC:          Увеличить счетчик команд (или установить новый адрес при переходе)
+</code></pre></div></p>
 <blockquote>
 <p><strong>Проблема фон-неймановского бутылочного горлышка:</strong> Пропускная способность шины между CPU и памятью ограничивает скорость работы. Решение → кэш-память.</p>
 </blockquote>
 <h3 id="pipelining">Конвейеризация (Pipelining) 🏭<a class="headerlink" href="#pipelining" title="Permanent link">&para;</a></h3>
 <p>Техника ускорения выполнения команд за счет параллелизма на уровне стадий.</p>
 <p><strong>Идея:</strong> Разбить выполнение команды на стадии и выполнять разные команды на разных стадиях одновременно.</p>
-<p><strong>Классический 5-ступенчатый конвейер (MIPS):</strong></p>
-<div class="codehilite"><pre><span></span><code>Время<span class="w"> </span>→
-Команда<span class="w"> </span><span class="mi">1</span>:<span class="w"> </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
-Команда<span class="w"> </span><span class="mi">2</span>:<span class="w">      </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
-Команда<span class="w"> </span><span class="mi">3</span>:<span class="w">           </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
-Команда<span class="w"> </span><span class="mi">4</span>:<span class="w">                </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
+<p><strong>Классический 5-ступенчатый конвейер (MIPS):</strong>
+<div class="highlight"><pre><span></span><code>Время →
+Команда 1: IF → ID → EX → MEM → WB
+Команда 2:      IF → ID → EX → MEM → WB
+Команда 3:           IF → ID → EX → MEM → WB
+Команда 4:                IF → ID → EX → MEM → WB
 </code></pre></div>
-
-<ul>
-<li><strong>IF (Instruction Fetch):</strong> Выборка команды</li>
-<li><strong>ID (Instruction Decode):</strong> Декодирование и чтение регистров</li>
-<li><strong>EX (Execute):</strong> Выполнение операции</li>
-<li><strong>MEM (Memory Access):</strong> Доступ к памяти</li>
-<li><strong>WB (Write Back):</strong> Запись результата в регистр</li>
-</ul>
+- <strong>IF (Instruction Fetch):</strong> Выборка команды
+- <strong>ID (Instruction Decode):</strong> Декодирование и чтение регистров
+- <strong>EX (Execute):</strong> Выполнение операции
+- <strong>MEM (Memory Access):</strong> Доступ к памяти
+- <strong>WB (Write Back):</strong> Запись результата в регистр</p>
 <p><strong>Преимущество:</strong> В идеале — <strong>1 команда за такт</strong> (vs 5 тактов на команду без конвейера).</p>
 <p><strong>Проблемы конвейера:</strong>
 - <strong>Конфликты данных:</strong> Команда зависит от результата предыдущей, которая ещё не завершилась.
@@ -947,19 +967,18 @@
 - <em>Совет:</em> Повторно используйте переменные, держите "горячие" данные в кэше.</p>
 <p><strong>Пространственная локальность:</strong> Если обратились к данным, скорее всего, обратятся к соседним.
 - <em>Совет:</em> Обрабатывайте массивы последовательно, используйте структуры вместо массивов структур (SoA vs AoS).</p>
-<p><strong>Пример (плохо vs хорошо):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># ❌ Плохо: скачкообразный доступ к памяти (промах кэша)</span>
+<p><strong>Пример (плохо vs хорошо):</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># ❌ Плохо: скачкообразный доступ к памяти (промах кэша)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
     <span class="n">process</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
 <span class="c1"># ✅ Хорошо: последовательный доступ (попадание в кэш)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
     <span class="n">process</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <h3 id="alignment">Выравнивание данных (Alignment)<a class="headerlink" href="#alignment" title="Permanent link">&para;</a></h3>
 <p>CPU обращается к памяти блоками (обычно 4 или 8 байт). Если данные не выровнены по границе блока, требуется 2 обращения вместо 1.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// ❌ Плохо: структура 9 байт, выравнивание нарушено</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ Плохо: структура 9 байт, выравнивание нарушено</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">Bad</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">     </span><span class="c1">// 1 байт</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">      </span><span class="c1">// 4 байта (смещение 1, нужно 3 байта padding)</span>
@@ -974,11 +993,10 @@
 <span class="w">    </span><span class="c1">// 1 байт padding до границы 4</span>
 <span class="p">};</span><span class="w"> </span><span class="c1">// Итого: 8 байт</span>
 </code></pre></div>
-
 <h3 id="branch-prediction">Branch Prediction (Предсказание переходов)<a class="headerlink" href="#branch-prediction" title="Permanent link">&para;</a></h3>
 <p>CPU предсказывает, куда пойдет ветвление (if/else), и начинает выполнять команды заранее. Если предсказание неверно — конвейер сбрасывается (~10-20 тактов потерь).</p>
-<p><strong>Совет:</strong> Избегайте непредсказуемых условий в горячих циклах.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># ❌ Плохо: случайные данные, предсказатель ошибается в 50% случаев</span>
+<p><strong>Совет:</strong> Избегайте непредсказуемых условий в горячих циклах.
+<div class="highlight"><pre><span></span><code><span class="c1"># ❌ Плохо: случайные данные, предсказатель ошибается в 50% случаев</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">random_array</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">128</span><span class="p">:</span>
         <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span>
@@ -987,8 +1005,7 @@
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sorted_array</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">128</span><span class="p">:</span>
         <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <hr />
 <h2 id="_6">📝 Шпаргалка: Порядок величин<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <table>
