@@ -835,76 +835,18 @@
 <h2 id="1-big-o-notation">1. Оценка сложности алгоритмов (Big O Notation) 📈<a class="headerlink" href="#1-big-o-notation" title="Permanent link">&para;</a></h2>
 <p><strong>Big O</strong> описывает, как время выполнения или потребление памяти растет с увеличением размера входных данных (n).</p>
 <h3 id="_2">Основные классы сложности<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Сложность</th>
-<th>Название</th>
-<th>Пример</th>
-<th>n=10</th>
-<th>n=1000</th>
-<th>n=1,000,000</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>O(1)</strong></td>
-<td>Константное</td>
-<td>Доступ к элементу массива</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td><strong>O(log n)</strong></td>
-<td>Логарифмическое</td>
-<td>Бинарный поиск</td>
-<td>~3</td>
-<td>~10</td>
-<td>~20</td>
-</tr>
-<tr>
-<td><strong>O(n)</strong></td>
-<td>Линейное</td>
-<td>Поиск в массиве</td>
-<td>10</td>
-<td>1000</td>
-<td>1,000,000</td>
-</tr>
-<tr>
-<td><strong>O(n log n)</strong></td>
-<td>Линейно-логарифмическое</td>
-<td>Быстрая сортировка</td>
-<td>~30</td>
-<td>~10,000</td>
-<td>~20,000,000</td>
-</tr>
-<tr>
-<td><strong>O(n²)</strong></td>
-<td>Квадратичное</td>
-<td>Сортировка пузырьком</td>
-<td>100</td>
-<td>1,000,000</td>
-<td>1,000,000,000,000</td>
-</tr>
-<tr>
-<td><strong>O(2ⁿ)</strong></td>
-<td>Экспоненциальное</td>
-<td>Перебор всех подмножеств</td>
-<td>1024</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><strong>O(n!)</strong></td>
-<td>Факториальное</td>
-<td>Задача коммивояжера (перебор)</td>
-<td>3,628,800</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-</tbody>
-</table>
+<div class="highlight"><pre><span></span><code>┌────────────────┬─────────────────────────┬───────────────────────────────┬───────────┬───────────┬───────────────────┐
+│ Сложность      │ Название                │ Пример                        │ n=10      │ n=1000    │ n=1,000,000       │
+├────────────────┼─────────────────────────┼───────────────────────────────┼───────────┼───────────┼───────────────────┤
+│ **O(1)**       │ Константное             │ Доступ к элементу массива     │ 1         │ 1         │ 1                 │
+│ **O(log n)**   │ Логарифмическое         │ Бинарный поиск                │ ~3        │ ~10       │ ~20               │
+│ **O(n)**       │ Линейное                │ Поиск в массиве               │ 10        │ 1000      │ 1,000,000         │
+│ **O(n log n)** │ Линейно-логарифмическое │ Быстрая сортировка            │ ~30       │ ~10,000   │ ~20,000,000       │
+│ **O(n²)**      │ Квадратичное            │ Сортировка пузырьком          │ 100       │ 1,000,000 │ 1,000,000,000,000 │
+│ **O(2ⁿ)**      │ Экспоненциальное        │ Перебор всех подмножеств      │ 1024      │ ❌         │ ❌                 │
+│ **O(n!)**      │ Факториальное           │ Задача коммивояжера (перебор) │ 3,628,800 │ ❌         │ ❌                 │
+└────────────────┴─────────────────────────┴───────────────────────────────┴───────────┴───────────┴───────────────────┘
+</code></pre></div>
 <blockquote>
 <p><strong>Важно:</strong> Big O описывает <strong>худший случай</strong> (upper bound). На практике алгоритм может работать быстрее.</p>
 </blockquote>
@@ -950,84 +892,18 @@
 <hr />
 <h2 id="2">2. Алгоритмы сортировки 🔀<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="_4">Сравнительная таблица<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Алгоритм</th>
-<th>Лучший</th>
-<th>Средний</th>
-<th>Худший</th>
-<th>Память</th>
-<th>Стабильный</th>
-<th>Применение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Пузырьковая</strong></td>
-<td>O(n)</td>
-<td>O(n²)</td>
-<td>O(n²)</td>
-<td>O(1)</td>
-<td>✅ Да</td>
-<td>Только для обучения</td>
-</tr>
-<tr>
-<td><strong>Выбором</strong></td>
-<td>O(n²)</td>
-<td>O(n²)</td>
-<td>O(n²)</td>
-<td>O(1)</td>
-<td>❌ Нет</td>
-<td>Только для обучения</td>
-</tr>
-<tr>
-<td><strong>Вставками</strong></td>
-<td>O(n)</td>
-<td>O(n²)</td>
-<td>O(n²)</td>
-<td>O(1)</td>
-<td>✅ Да</td>
-<td>Малые массивы (&lt;50)</td>
-</tr>
-<tr>
-<td><strong>Быстрая (Quick)</strong></td>
-<td>O(n log n)</td>
-<td>O(n log n)</td>
-<td>O(n²)</td>
-<td>O(log n)</td>
-<td>❌ Нет</td>
-<td><strong>Универсальная</strong></td>
-</tr>
-<tr>
-<td><strong>Слиянием (Merge)</strong></td>
-<td>O(n log n)</td>
-<td>O(n log n)</td>
-<td>O(n log n)</td>
-<td>O(n)</td>
-<td>✅ Да</td>
-<td>Linked lists, внешняя сортировка</td>
-</tr>
-<tr>
-<td><strong>Пирамидальная (Heap)</strong></td>
-<td>O(n log n)</td>
-<td>O(n log n)</td>
-<td>O(n log n)</td>
-<td>O(1)</td>
-<td>❌ Нет</td>
-<td>Когда мало памяти</td>
-</tr>
-<tr>
-<td><strong>Timsort</strong></td>
-<td>O(n)</td>
-<td>O(n log n)</td>
-<td>O(n log n)</td>
-<td>O(n)</td>
-<td>✅ Да</td>
-<td>Python <code>.sort()</code>, Java <code>.sort()</code></td>
-</tr>
-</tbody>
-</table>
+<div class="highlight"><pre><span></span><code>┌──────────────────────────┬────────────┬────────────┬────────────┬──────────┬────────────┬──────────────────────────────────┐
+│ Алгоритм                 │ Лучший     │ Средний    │ Худший     │ Память   │ Стабильный │ Применение                       │
+├──────────────────────────┼────────────┼────────────┼────────────┼──────────┼────────────┼──────────────────────────────────┤
+│ **Пузырьковая**          │ O(n)       │ O(n²)      │ O(n²)      │ O(1)     │ ✅ Да       │ Только для обучения              │
+│ **Выбором**              │ O(n²)      │ O(n²)      │ O(n²)      │ O(1)     │ ❌ Нет      │ Только для обучения              │
+│ **Вставками**            │ O(n)       │ O(n²)      │ O(n²)      │ O(1)     │ ✅ Да       │ Малые массивы (&lt;50)              │
+│ **Быстрая (Quick)**      │ O(n log n) │ O(n log n) │ O(n²)      │ O(log n) │ ❌ Нет      │ **Универсальная**                │
+│ **Слиянием (Merge)**     │ O(n log n) │ O(n log n) │ O(n log n) │ O(n)     │ ✅ Да       │ Linked lists, внешняя сортировка │
+│ **Пирамидальная (Heap)** │ O(n log n) │ O(n log n) │ O(n log n) │ O(1)     │ ❌ Нет      │ Когда мало памяти                │
+│ **Timsort**              │ O(n)       │ O(n log n) │ O(n log n) │ O(n)     │ ✅ Да       │ Python `.sort()`, Java `.sort()` │
+└──────────────────────────┴────────────┴────────────┴────────────┴──────────┴────────────┴──────────────────────────────────┘
+</code></pre></div>
 <h3 id="bubble-sort">Пузырьковая сортировка (Bubble Sort)<a class="headerlink" href="#bubble-sort" title="Permanent link">&para;</a></h3>
 <p><strong>Идея:</strong> Многократно проходим по массиву, меняя местами соседние элементы, если они в неправильном порядке.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
@@ -1295,72 +1171,20 @@
 - Поиск ближайшей пары точек</p>
 <hr />
 <h2 id="_6">📊 Сводная таблица алгоритмов<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Категория</th>
-<th>Алгоритм</th>
-<th>Сложность</th>
-<th>Применение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Сортировка</strong></td>
-<td>QuickSort</td>
-<td>O(n log n)</td>
-<td>Универсальная</td>
-</tr>
-<tr>
-<td><strong>Сортировка</strong></td>
-<td>MergeSort</td>
-<td>O(n log n)</td>
-<td>Linked lists, внешняя</td>
-</tr>
-<tr>
-<td><strong>Сортировка</strong></td>
-<td>HeapSort</td>
-<td>O(n log n)</td>
-<td>Мало памяти</td>
-</tr>
-<tr>
-<td><strong>Поиск</strong></td>
-<td>Binary Search</td>
-<td>O(log n)</td>
-<td>Отсортированные массивы</td>
-</tr>
-<tr>
-<td><strong>Графы</strong></td>
-<td>BFS</td>
-<td>O(V+E)</td>
-<td>Кратчайший путь (невзвешенный)</td>
-</tr>
-<tr>
-<td><strong>Графы</strong></td>
-<td>DFS</td>
-<td>O(V+E)</td>
-<td>Обход, топологическая сортировка</td>
-</tr>
-<tr>
-<td><strong>Графы</strong></td>
-<td>Dijkstra</td>
-<td>O((V+E)logV)</td>
-<td>Кратчайший путь (взвешенный)</td>
-</tr>
-<tr>
-<td><strong>DP</strong></td>
-<td>Fibonacci</td>
-<td>O(n)</td>
-<td>Пример перекрывающихся подзадач</td>
-</tr>
-<tr>
-<td><strong>DP</strong></td>
-<td>Knapsack</td>
-<td>O(nW)</td>
-<td>Оптимизация ресурсов</td>
-</tr>
-</tbody>
-</table>
+<div class="highlight"><pre><span></span><code>┌────────────────┬───────────────┬──────────────┬──────────────────────────────────┐
+│ Категория      │ Алгоритм      │ Сложность    │ Применение                       │
+├────────────────┼───────────────┼──────────────┼──────────────────────────────────┤
+│ **Сортировка** │ QuickSort     │ O(n log n)   │ Универсальная                    │
+│ **Сортировка** │ MergeSort     │ O(n log n)   │ Linked lists, внешняя            │
+│ **Сортировка** │ HeapSort      │ O(n log n)   │ Мало памяти                      │
+│ **Поиск**      │ Binary Search │ O(log n)     │ Отсортированные массивы          │
+│ **Графы**      │ BFS           │ O(V+E)       │ Кратчайший путь (невзвешенный)   │
+│ **Графы**      │ DFS           │ O(V+E)       │ Обход, топологическая сортировка │
+│ **Графы**      │ Dijkstra      │ O((V+E)logV) │ Кратчайший путь (взвешенный)     │
+│ **DP**         │ Fibonacci     │ O(n)         │ Пример перекрывающихся подзадач  │
+│ **DP**         │ Knapsack      │ O(nW)        │ Оптимизация ресурсов             │
+└────────────────┴───────────────┴──────────────┴──────────────────────────────────┘
+</code></pre></div>
 <hr />
 <h2 id="_7">🎯 Как выбрать алгоритм?<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ol>
