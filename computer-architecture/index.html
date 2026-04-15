@@ -9,7 +9,7 @@
         <meta name="description" content="Фундаментальные основы Computer Science">
       
       
-        <meta name="author" content="Daniil Gavrin">
+        <meta name="author" content="DaniilGavrin">
       
       
       
@@ -64,12 +64,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -120,33 +118,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Переключить на темную тему"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Переключить на темную тему" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Переключить на светлую тему"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Переключить на светлую тему" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -336,7 +308,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="CS Fundamentals" class="md-nav__button md-logo" aria-label="CS Fundamentals" data-md-component="logo">
       
@@ -761,243 +735,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Основные компоненты компьютера 🖥️
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Основные компоненты компьютера 🖥️">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cpu-central-processing-unit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Процессор (CPU — Central Processing Unit)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#memory-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Память (Memory Hierarchy) 📊
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-io" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ввод-вывод (I/O) 🔌
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Принципы работы процессора ⚙️
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Принципы работы процессора ⚙️">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Фон-неймановская архитектура
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pipelining" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Конвейеризация (Pipelining) 🏭
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Многозадачность и многопоточность 🔄
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Представление данных 💾
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Представление данных 💾">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Числа в компьютере
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Кодировки текста
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Оптимизация кода с учетом архитектуры 🚀
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Оптимизация кода с учетом архитектуры 🚀">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Локальность данных
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Выравнивание данных (Alignment)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#branch-prediction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Branch Prediction (Предсказание переходов)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📝 Шпаргалка: Порядок величин
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🎯 Практическое применение в разработке
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1030,7 +767,7 @@
 </blockquote>
 <h3 id="memory-hierarchy">Память (Memory Hierarchy) 📊<a class="headerlink" href="#memory-hierarchy" title="Permanent link">&para;</a></h3>
 <p>Иерархия памяти строится по принципу <strong>"быстрее = меньше = дороже"</strong>:</p>
-<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────┐
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────┐
 │         Регистры CPU                │ ← 1 цикл, ~1 байт
 │         (самая быстрая)             │
 ├─────────────────────────────────────┤
@@ -1047,6 +784,7 @@
 │    HDD (медленная вторичная)        │ ← 1,000,000+ циклов, ~1-10 TB
 └─────────────────────────────────────┘
 </code></pre></div>
+
 <p><strong>Типы памяти:</strong>
 - <strong>RAM (Random Access Memory):</strong> Энергозависимая, быстрая, для работающих программ.
   - <strong>DRAM:</strong> Дешевле, медленнее, используется для основной памяти.
@@ -1071,30 +809,34 @@
 2. <strong>Последовательное выполнение:</strong> Команды выполняются одна за другой.
 3. <strong>Адресуемость памяти:</strong> Каждая ячейка памяти имеет уникальный адрес.
 4. <strong>Условные переходы:</strong> Возможность изменять порядок выполнения команд (if, loops).</p>
-<p><strong>Цикл выполнения команды (Fetch-Decode-Execute):</strong>
-<div class="highlight"><pre><span></span><code>1. Fetch (Выборка):    Получить команду из памяти по адресу PC (Program Counter)
-2. Decode (Декодирование): Определить, что нужно сделать
-3. Execute (Выполнение): Выполнить операцию (АЛУ, запись в память, переход)
-4. Update PC:          Увеличить счетчик команд (или установить новый адрес при переходе)
-</code></pre></div></p>
+<p><strong>Цикл выполнения команды (Fetch-Decode-Execute):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Fetch</span><span class="w"> </span><span class="p">(</span><span class="n">Выборка</span><span class="p">):</span><span class="w">    </span><span class="n">Получить</span><span class="w"> </span><span class="n">команду</span><span class="w"> </span><span class="n">из</span><span class="w"> </span><span class="n">памяти</span><span class="w"> </span><span class="n">по</span><span class="w"> </span><span class="n">адресу</span><span class="w"> </span><span class="n">PC</span><span class="w"> </span><span class="p">(</span><span class="n">Program</span><span class="w"> </span><span class="n">Counter</span><span class="p">)</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Decode</span><span class="w"> </span><span class="p">(</span><span class="n">Декодирование</span><span class="p">):</span><span class="w"> </span><span class="n">Определить</span><span class="p">,</span><span class="w"> </span><span class="n">что</span><span class="w"> </span><span class="n">нужно</span><span class="w"> </span><span class="n">сделать</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Execute</span><span class="w"> </span><span class="p">(</span><span class="n">Выполнение</span><span class="p">):</span><span class="w"> </span><span class="n">Выполнить</span><span class="w"> </span><span class="n">операцию</span><span class="w"> </span><span class="p">(</span><span class="n">АЛУ</span><span class="p">,</span><span class="w"> </span><span class="n">запись</span><span class="w"> </span><span class="n">в</span><span class="w"> </span><span class="n">память</span><span class="p">,</span><span class="w"> </span><span class="n">переход</span><span class="p">)</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">PC</span><span class="p">:</span><span class="w">          </span><span class="n">Увеличить</span><span class="w"> </span><span class="n">счетчик</span><span class="w"> </span><span class="n">команд</span><span class="w"> </span><span class="p">(</span><span class="n">или</span><span class="w"> </span><span class="n">установить</span><span class="w"> </span><span class="n">новый</span><span class="w"> </span><span class="n">адрес</span><span class="w"> </span><span class="n">при</span><span class="w"> </span><span class="n">переходе</span><span class="p">)</span>
+</code></pre></div>
+
 <blockquote>
 <p><strong>Проблема фон-неймановского бутылочного горлышка:</strong> Пропускная способность шины между CPU и памятью ограничивает скорость работы. Решение → кэш-память.</p>
 </blockquote>
 <h3 id="pipelining">Конвейеризация (Pipelining) 🏭<a class="headerlink" href="#pipelining" title="Permanent link">&para;</a></h3>
 <p>Техника ускорения выполнения команд за счет параллелизма на уровне стадий.</p>
 <p><strong>Идея:</strong> Разбить выполнение команды на стадии и выполнять разные команды на разных стадиях одновременно.</p>
-<p><strong>Классический 5-ступенчатый конвейер (MIPS):</strong>
-<div class="highlight"><pre><span></span><code>Время →
-Команда 1: IF → ID → EX → MEM → WB
-Команда 2:      IF → ID → EX → MEM → WB
-Команда 3:           IF → ID → EX → MEM → WB
-Команда 4:                IF → ID → EX → MEM → WB
+<p><strong>Классический 5-ступенчатый конвейер (MIPS):</strong></p>
+<div class="codehilite"><pre><span></span><code>Время<span class="w"> </span>→
+Команда<span class="w"> </span><span class="mi">1</span>:<span class="w"> </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
+Команда<span class="w"> </span><span class="mi">2</span>:<span class="w">      </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
+Команда<span class="w"> </span><span class="mi">3</span>:<span class="w">           </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
+Команда<span class="w"> </span><span class="mi">4</span>:<span class="w">                </span><span class="k">IF</span><span class="w"> </span>→<span class="w"> </span><span class="nv">ID</span><span class="w"> </span>→<span class="w"> </span><span class="nv">EX</span><span class="w"> </span>→<span class="w"> </span><span class="nv">MEM</span><span class="w"> </span>→<span class="w"> </span><span class="nv">WB</span>
 </code></pre></div>
-- <strong>IF (Instruction Fetch):</strong> Выборка команды
-- <strong>ID (Instruction Decode):</strong> Декодирование и чтение регистров
-- <strong>EX (Execute):</strong> Выполнение операции
-- <strong>MEM (Memory Access):</strong> Доступ к памяти
-- <strong>WB (Write Back):</strong> Запись результата в регистр</p>
+
+<ul>
+<li><strong>IF (Instruction Fetch):</strong> Выборка команды</li>
+<li><strong>ID (Instruction Decode):</strong> Декодирование и чтение регистров</li>
+<li><strong>EX (Execute):</strong> Выполнение операции</li>
+<li><strong>MEM (Memory Access):</strong> Доступ к памяти</li>
+<li><strong>WB (Write Back):</strong> Запись результата в регистр</li>
+</ul>
 <p><strong>Преимущество:</strong> В идеале — <strong>1 команда за такт</strong> (vs 5 тактов на команду без конвейера).</p>
 <p><strong>Проблемы конвейера:</strong>
 - <strong>Конфликты данных:</strong> Команда зависит от результата предыдущей, которая ещё не завершилась.
@@ -1205,18 +947,19 @@
 - <em>Совет:</em> Повторно используйте переменные, держите "горячие" данные в кэше.</p>
 <p><strong>Пространственная локальность:</strong> Если обратились к данным, скорее всего, обратятся к соседним.
 - <em>Совет:</em> Обрабатывайте массивы последовательно, используйте структуры вместо массивов структур (SoA vs AoS).</p>
-<p><strong>Пример (плохо vs хорошо):</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># ❌ Плохо: скачкообразный доступ к памяти (промах кэша)</span>
+<p><strong>Пример (плохо vs хорошо):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># ❌ Плохо: скачкообразный доступ к памяти (промах кэша)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
     <span class="n">process</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
 <span class="c1"># ✅ Хорошо: последовательный доступ (попадание в кэш)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>
     <span class="n">process</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</code></pre></div></p>
+</code></pre></div>
+
 <h3 id="alignment">Выравнивание данных (Alignment)<a class="headerlink" href="#alignment" title="Permanent link">&para;</a></h3>
 <p>CPU обращается к памяти блоками (обычно 4 или 8 байт). Если данные не выровнены по границе блока, требуется 2 обращения вместо 1.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// ❌ Плохо: структура 9 байт, выравнивание нарушено</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// ❌ Плохо: структура 9 байт, выравнивание нарушено</span>
 <span class="k">struct</span><span class="w"> </span><span class="nc">Bad</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">     </span><span class="c1">// 1 байт</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">      </span><span class="c1">// 4 байта (смещение 1, нужно 3 байта padding)</span>
@@ -1231,10 +974,11 @@
 <span class="w">    </span><span class="c1">// 1 байт padding до границы 4</span>
 <span class="p">};</span><span class="w"> </span><span class="c1">// Итого: 8 байт</span>
 </code></pre></div>
+
 <h3 id="branch-prediction">Branch Prediction (Предсказание переходов)<a class="headerlink" href="#branch-prediction" title="Permanent link">&para;</a></h3>
 <p>CPU предсказывает, куда пойдет ветвление (if/else), и начинает выполнять команды заранее. Если предсказание неверно — конвейер сбрасывается (~10-20 тактов потерь).</p>
-<p><strong>Совет:</strong> Избегайте непредсказуемых условий в горячих циклах.
-<div class="highlight"><pre><span></span><code><span class="c1"># ❌ Плохо: случайные данные, предсказатель ошибается в 50% случаев</span>
+<p><strong>Совет:</strong> Избегайте непредсказуемых условий в горячих циклах.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># ❌ Плохо: случайные данные, предсказатель ошибается в 50% случаев</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">random_array</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">128</span><span class="p">:</span>
         <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span>
@@ -1243,7 +987,8 @@
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sorted_array</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">128</span><span class="p">:</span>
         <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span>
-</code></pre></div></p>
+</code></pre></div>
+
 <hr />
 <h2 id="_6">📝 Шпаргалка: Порядок величин<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <table>
@@ -1332,12 +1077,6 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  К началу
-</button>
-        
       </main>
       
         <footer class="md-footer">
@@ -1367,7 +1106,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
